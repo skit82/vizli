@@ -1,0 +1,158 @@
+.purpose {
+  &__wrapper {
+    margin-bottom: 120px;
+  }
+
+  &__name {
+    p {
+      font-size: 52px;
+      font-family: $ff-roboto-1;
+      font-weight: 300;
+      line-height: 115%;
+      margin: 0;
+
+      color: $color-dark-blue;
+
+      @include vp-1439 {
+        font-size: 40px;
+        line-height: 108%;
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: 48px;
+    @include vp-1439 {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    // flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 103px;
+    row-gap: 40px;
+
+    max-width: 1249px;
+    min-height: 215px;
+    margin: 0 auto;
+
+    @include vp-1439 {
+      max-width: 1153px;
+      min-height: 193px;
+      column-gap: 79px;
+      row-gap: 30px;
+    }
+  }
+
+  &__text {
+    p {
+      font-family: $ff-roboto;
+      font-weight: 400;
+      font-size: 22px;
+      margin: 0;
+
+      line-height: 136%;
+      text-align: center;
+      color: $color-dark-blue;
+
+      @include vp-1439 {
+        font-size: 20px;
+        line-height: 130%;
+      }
+    }
+  }
+
+  &__img {
+
+    img {
+      max-width: fit-content;
+      margin: auto;
+    }
+
+    &--detalis {
+      @include vp-1439 {
+        img {
+          width: 82px;
+          height: 82px;
+        }
+      }
+    }
+
+    &--hardware {
+      @include vp-1439 {
+        img {
+          width: 75px;
+          height: 83px;
+        }
+      }
+    }
+
+    &--technic {
+      @include vp-1439 {
+        img {
+          width: 65px;
+          height: 79px;
+        }
+      }
+    }
+
+    &--agricultural {
+      @include vp-1439 {
+        img {
+          width: 97px;
+          height: 86px;
+        }
+      }
+    }
+
+    &--industry {
+      @include vp-1439 {
+        img {
+          width: 68px;
+          height: 82px;
+        }
+      }
+    }
+  }
+
+  &__item {
+    &--detalis {
+
+      @include vp-1439 {
+        width: 192px;
+      }
+    }
+
+    &--hardware {
+
+      @include vp-1439 {
+        width: 160px;
+      }
+    }
+
+    &--technic {
+
+      @include vp-1439 {
+        width: 146px;
+      }
+    }
+
+    &--agricultural {
+
+      @include vp-1439 {
+        width: 157px;
+      }
+    }
+
+    &--industry {
+
+      @include vp-1439 {
+        width: 178px;
+      }
+    }
+  }
+}

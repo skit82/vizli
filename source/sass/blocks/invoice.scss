@@ -1,0 +1,52 @@
+.invoice {
+  &__info {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__billet {
+    margin-left: auto;
+  }
+
+
+  &__name {
+    p {
+      font-size: 52px;
+      font-family: $ff-roboto-1;
+      font-weight: 300;
+      line-height: 115%;
+      margin: 0;
+
+      color: $color-dark-blue;
+
+      @include vp-1439 {
+        font-size: 40px;
+        line-height: 108%;
+      }
+    }
+  }
+
+  &__billet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+
+    padding: 18px 34px;
+    width: 268px;
+    height: 62px;
+
+    background: linear-gradient(225deg, #336eed 0%, #2c1c79 100%);
+
+    p {
+      font-family: $ff-roboto-1;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 130%;
+      color: #ffffff;
+
+      margin: 0;
+    }
+  }
+}

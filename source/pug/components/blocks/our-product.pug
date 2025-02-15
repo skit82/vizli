@@ -1,0 +1,14 @@
+mixin our-product()
+  section.our-product
+    .container
+      .our-product__wrapper
+        .our-product__caption
+          .our-product__title
+            h2.title.title--1 Наш продукт
+          .our-product__img
+            img(src="./img/svg/info-logo.svg", widht="560", height="138", alt="Логотип компании")
+        .our-product__name
+          p Мы производим порошковую краску на основе полиэфирной смолы. Наша краска обеспечивает высокую механическую прочность и стойкость к атмосферным воздействиям, в том числе к ультрафиолету. Это делает её идеальной для окраски металлических конструкций, используемых как на открытом воздухе, так и в помещениях.
+      +advantage()
+      +purpose()
+      +invoice()

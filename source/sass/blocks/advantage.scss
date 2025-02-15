@@ -1,0 +1,153 @@
+.advantage {
+
+  &__wrapper {
+    display: flex;
+    margin-bottom: 60px;
+
+    @include vp-1439 {
+      margin-bottom: 88px;
+    }
+  }
+
+  &__description {
+    flex: 0 1 50%;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    flex: 0 1 50%;
+
+    margin-top: -22px;
+    margin-right: 20px;
+
+    @include vp-1439 {
+      margin-top: -13px;
+      margin-right: 38px;
+    }
+
+    img {
+      @include vp-1439 {
+        width: 384px;
+      }
+    }
+  }
+
+  &__cicle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-shrink: 0;
+    gap: 5px;
+    border-radius: 1000px;
+    width: 160px;
+    height: 160px;
+    transform: translateX(60px);
+    background: linear-gradient(99deg, #336eed 0%, #12326f 64.77%, #6249d6 100%);
+
+    p {
+      font-weight: 900;
+      font-size: 60px;
+      font-family: $ff-roboto;
+      line-height: 117%;
+      color: #ffffff;
+    }
+
+    span {
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 128%;
+      font-family: $ff-roboto;
+      color: #ffffff;
+    }
+  }
+
+  &__name {
+    p {
+      font-size: 52px;
+      font-family: $ff-roboto-1;
+      font-weight: 300;
+      line-height: 115%;
+      margin: 0;
+
+      color: $color-dark-blue;
+
+      @include vp-1439 {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: 48px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 500px;
+      top: 350px;
+      background-image: url("../img/content/spot-product-2.jpg");
+      background-repeat: no-repeat;
+      z-index: -1;
+
+    }
+
+    @include vp-1439 {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    margin-left: 96px;
+
+    @include vp-1439 {
+      margin-left: 42px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 21px;
+
+    @include vp-1439 {
+      margin-bottom: 17px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 16px;
+      width: 15px;
+      height: 3px;
+      background-color: $color-blue-blue;
+
+      @include vp-1439 {
+        top: 13px;
+      }
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 300;
+      font-family: $ff-roboto-1;
+      line-height: 145%;
+
+      margin: 0;
+
+      color: $color-dark-blue;
+
+      @include vp-1439 {
+        font-size: 20px;
+      }
+    }
+  }
+}

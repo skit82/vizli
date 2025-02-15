@@ -47,8 +47,12 @@ mixin header(headerMods, currentUrl)
                 li.header__main-menu-item
                   if(activeState)
                     a.header__main-menu-link.is-active(href=link.href, data-dropdown="trigger")=link.text
+                    .header__main-menu-icon
+                      img(src="./img/svg/arrow-right.svg", widht="22", height="22", alt="Стрелочка")
                   else
                     a.header__main-menu-link(href=link.href, data-dropdown="trigger")=link.text
+                    .header__main-menu-icon
+                      img(src="./img/svg/arrow-right.svg", widht="22", height="22", alt="Стрелочка")
         .header__contact
           p #[a(href="tel:+78482697651", class="contact__phone") +7 8482 69 76 51]
           p #[a(href="tel:+78482697655", class="contact__phone") +7 8482 69 76 55]
@@ -69,7 +73,7 @@ mixin header(headerMods, currentUrl)
             .info__certificate.certificate
               .certificate__content
                 .certificate__description
-                  .certificate__description-img
+                  .certificate__description-img.certificate__description-img--iso
                     +icon("icon-iso", 60, 60)
                   .certificate__description-box
                     .certificate__description-text
@@ -77,7 +81,7 @@ mixin header(headerMods, currentUrl)
                     .certificate__description-icon
                       +icon("icon-upload", 26, 29)
                 .certificate__description
-                  .certificate__description-img
+                  .certificate__description-img.certificate__description-img--iatf
                     +icon("icon-iatf", 88, 60)
                   .certificate__description-box
                     .certificate__description-text

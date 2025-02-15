@@ -1,0 +1,38 @@
+.production {
+  &__wrapper {
+    margin-bottom: 120px;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__name {
+    max-width: 1248px;
+    margin-bottom: 40px;
+
+    p {
+      font-family: $ff-roboto-1;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 133%;
+      margin: 0;
+
+      color: $color-dark-blue;
+    }
+  }
+
+  &__description {
+    margin-left: 96px;
+    max-width: 1248px;
+
+    p {
+      font-size: 22px;
+      font-weight: 300;
+      font-family: $ff-roboto-1;
+      line-height: 145%;
+
+      color: $color-dark-blue;
+    }
+  }
+}

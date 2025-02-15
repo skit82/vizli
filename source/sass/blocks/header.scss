@@ -110,7 +110,7 @@
 
     @include vp-1149 {
       margin: 0;
-      padding-left: 100px;
+      padding-left: 124px;
       margin-top: 60px;
     }
   }
@@ -189,9 +189,18 @@
     // margin-left: -10px;
   }
 
+  @include vp-599 {
+    padding-top: 33px;
+    padding-left: 12px;
+  }
+
   img {
     @include vp-1149 {
       width: 220px;
+    }
+
+    @include vp-599 {
+      width: 126px;
     }
   }
 }
@@ -211,7 +220,7 @@
 
   @include vp-1149 {
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 64px;
     margin-bottom: 80px;
   }
 }
@@ -270,8 +279,24 @@
     flex-direction: column;
     background-color: $color-default-white;
     align-items: stretch;
-    padding-left: 100px;
+    padding-left: 124px;
     gap: 32px;
+  }
+}
+
+.header__main-menu-icon {
+  display: none;
+  @include vp-1149 {
+    display: block;
+    margin-left: 14px;
+  }
+}
+
+.header__main-menu-item {
+  @include vp-1149 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 
@@ -326,12 +351,6 @@
     font-weight: 700;
     line-height: 131%;
     color: #212a3b;
-  }
-
-  @include vp-769 {
-    font-size: 24px;
-    line-height: normal;
-    padding: 10px 0;
   }
 
   &.is-active {
@@ -531,6 +550,11 @@
     cursor: pointer;
   }
 
+  @include vp-599 {
+    top: 32px;
+    right: 5px;
+  }
+
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
@@ -558,6 +582,11 @@
   transition: transform $trans-default;
   background-color: $color-default-white;
   // background-color: $color-black;
+
+  @include vp-599 {
+    width: 28px;
+    margin-bottom: 5px;
+  }
 }
 
 .header__menu-toggle span:last-child {
