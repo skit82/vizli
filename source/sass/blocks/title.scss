@@ -1,0 +1,75 @@
+.title {
+  font-family: $ff-roboto;
+  font-weight: 800;
+  font-size: 88px;
+  line-height: 111%;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+
+  @include vp-1439 {
+    font-size: 72px;
+    line-height: 114%;
+  }
+
+  @include vp-767 {
+    font-size: 49px;
+    line-height: 120%;
+  }
+
+  @include vp-359 {
+    font-size: 30px;
+    line-height: 133%;
+  }
+
+  &--1 {
+    font-weight: 800;
+    font-size: 128px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: $color-dark-blue;
+    margin: 0;
+
+    @include vp-1439 {
+      font-size: 91px;
+      line-height: 111%;
+    }
+
+    @include vp-767 {
+      font-size: 72px;
+      line-height: 114%;
+    }
+
+    @include vp-359 {
+      font-size: 40px;
+      line-height: 125%;
+    }
+  }
+
+  &--2 {
+    font-family: $ff-roboto-1;
+    font-weight: 900;
+    font-size: 64px;
+    color: $color-dark-blue;
+
+    line-height: 116%;
+
+    @include vp-1439 {
+      font-size: 48px;
+      line-height: 117%;
+    }
+
+    @include vp-767 {
+      font-size: 40px;
+      line-height: 125%;
+    }
+
+    @include vp-359 {
+      font-size: 30px;
+      line-height: 133%;
+    }
+  }
+}

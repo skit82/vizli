@@ -2,35 +2,87 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "#",
+        text: "Порошковая краска"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Производство"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Лаборатория"
+      },
+      {
+        href: "#",
+        text: "Контакты"
       },
     ]
 
-  header.header(class=headerMods)
-    .container
+  header.header(class=headerMods, data-mob-menu="burger-mod", data-fix-block)
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo-mobile
+          img(src="./img/svg/logo.svg", widht="403", height="45", alt="Логотип компании")
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
-                else
-                  a.main-nav__link(href=link.href)= link.text
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          img(src="./img/svg/logo.svg", widht="403", height="45", alt="Логотип компании")
+      button.header__menu-toggle(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-mob-menu="menu-toggle")
+        span
+        span
+        span
+      .header__wrapper(data-mob-menu="burger-mod")
+        if(currentUrl === "index.html")
+          //- lighthouse снимает 10 баллов SEO за <a> без href
+          span.header__logo(data-mob-menu="burger-mod")
+            img(src="./img/svg/logo.svg", widht="403", height="45", alt="Логотип компании")
+        else
+          a.header__logo(href="index.html", aria-label="Переход на главную", data-mob-menu="burger-mod")
+            img(src="./img/svg/logo.svg", widht="403", height="45", alt="Логотип компании")
+        nav.header__nav(data-mob-menu="burger-mod")
+          .header__nav-wrapper
+            ul.header__main-menu(data-dropdown="block-left-parent")
+              each link in headerLinks
+                - const activeState = currentUrl === link.href
+                li.header__main-menu-item
+                  if(activeState)
+                    a.header__main-menu-link.is-active(href=link.href, data-dropdown="trigger")=link.text
+                  else
+                    a.header__main-menu-link(href=link.href, data-dropdown="trigger")=link.text
+        .header__contact
+          p #[a(href="tel:+78482697651", class="contact__phone") +7 8482 69 76 51]
+          p #[a(href="tel:+78482697655", class="contact__phone") +7 8482 69 76 55]
+      .container
+        .info
+          .info__wrapper
+            .info__inner
+              .info__title
+                p Производим и поставляем
+                h1.title Порошковую краску
+              ul.info__list
+                li.info__item
+                  p собственное производство
+                li.info__item
+                  p уникальная рецептура
+                li.info__item
+                  p строгий контроль качества
+            .info__certificate.certificate
+              .certificate__content
+                .certificate__description
+                  .certificate__description-img
+                    +icon("icon-iso", 60, 60)
+                  .certificate__description-box
+                    .certificate__description-text
+                      p Сертификат ISO 9001:2024*
+                    .certificate__description-icon
+                      +icon("icon-upload", 26, 29)
+                .certificate__description
+                  .certificate__description-img
+                    +icon("icon-iatf", 88, 60)
+                  .certificate__description-box
+                    .certificate__description-text
+                      p Сертификат IATF 16949*
+                    .certificate__description-icon
+                      +icon("icon-upload", 26, 29)
+              .certificate__copyright
+                p * Сертификаты будут доступны с марта 2025 года
