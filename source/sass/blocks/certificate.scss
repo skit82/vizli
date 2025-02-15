@@ -1,15 +1,27 @@
 .certificate {
   max-width: 337px;
 
-  &__description-text {
-    p {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 137%;
-      text-align: center;
-      font-family: $ff-roboto-1;
-      color: $color-default-white;
-      margin: 0;
+  &__description-link {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 137%;
+    text-align: center;
+    font-family: $ff-roboto-1;
+    color: $color-default-white;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    margin: 0;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+
+
+        &__description-link {
+          text-decoration: none;
+        }
+      }
     }
   }
 
@@ -32,6 +44,10 @@
     flex-direction: row;
     gap: 65px;
     margin-bottom: 41px;
+
+    @include vp-769 {
+      margin-bottom: 40px;
+    }
   }
 
   &__description {
