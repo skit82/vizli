@@ -17,6 +17,16 @@
         font-size: 40px;
         line-height: 108%;
       }
+
+      @include vp-769 {
+        font-size: 32px;
+        line-height: 131%;
+      }
+
+      @include vp-599 {
+        font-size: 28px;
+        line-height: 136%;
+      }
     }
   }
 
@@ -25,26 +35,46 @@
     @include vp-1439 {
       margin-bottom: 60px;
     }
+
+    @include vp-769 {
+      margin-bottom: 40px;
+    }
+
+    @include vp-599 {
+      margin-bottom: 22px;
+    }
   }
 
   &__list {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     flex-direction: row;
     column-gap: 103px;
     row-gap: 40px;
 
-    max-width: 1249px;
+    max-width: 1265px;
     min-height: 215px;
     margin: 0 auto;
 
     @include vp-1439 {
-      max-width: 1153px;
+      max-width: 1160px;
       min-height: 193px;
       column-gap: 79px;
       row-gap: 30px;
+    }
+
+    @include vp-1149 {
+      flex-wrap: wrap;
+    }
+
+    @include vp-769 {
+      row-gap: 40px;
+    }
+
+    @include vp-361 {
+      column-gap: 35px;
     }
   }
 
@@ -63,6 +93,16 @@
         font-size: 20px;
         line-height: 130%;
       }
+
+      @include vp-769 {
+        font-size: 16px;
+        line-height: 125%;
+      }
+
+      @include vp-599 {
+        font-size: 14px;
+        line-height: 143%;
+      }
     }
   }
 
@@ -71,87 +111,64 @@
     img {
       max-width: fit-content;
       margin: auto;
-    }
 
-    &--detalis {
       @include vp-1439 {
-        img {
-          width: 82px;
-          height: 82px;
-        }
-      }
-    }
-
-    &--hardware {
-      @include vp-1439 {
-        img {
-          width: 75px;
-          height: 83px;
-        }
-      }
-    }
-
-    &--technic {
-      @include vp-1439 {
-        img {
-          width: 65px;
-          height: 79px;
-        }
-      }
-    }
-
-    &--agricultural {
-      @include vp-1439 {
-        img {
-          width: 97px;
-          height: 86px;
-        }
-      }
-    }
-
-    &--industry {
-      @include vp-1439 {
-        img {
-          width: 68px;
-          height: 82px;
-        }
+        width: 115px;
+        height: 115px;
+        object-fit: cover;
       }
     }
   }
 
   &__item {
     &--detalis {
+      width: 210px;
 
       @include vp-1439 {
         width: 192px;
       }
+
+      @include vp-599 {
+        width: 145px;
+      }
     }
 
     &--hardware {
+      width: 140px;
 
       @include vp-1439 {
-        width: 160px;
+        width: 165px;
+      }
+
+      @include vp-599 {
+        width: 145px;
       }
     }
 
     &--technic {
+      width: 152px;
 
-      @include vp-1439 {
-        width: 146px;
+      @include vp-599 {
+        width: 145px;
       }
     }
 
     &--agricultural {
-
-      @include vp-1439 {
-        width: 157px;
+      width: 157px;
+      @include vp-599 {
+        width: 145px;
       }
     }
 
     &--industry {
+      width: 190px;
 
       @include vp-1439 {
-        width: 178px;
+        width: 176px;
+      }
+
+      @include vp-599 {
+        width: 145px;
       }
     }
   }

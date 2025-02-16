@@ -595,6 +595,10 @@
 
 .header__menu-toggle[aria-pressed=true] span:first-child {
   transform: translateY(15px) rotate(45deg);
+
+  @include vp-599 {
+    transform: translateY(4px) rotate(45deg);
+  }
 }
 
 .header__menu-toggle[aria-pressed=true] span:nth-child(2) {

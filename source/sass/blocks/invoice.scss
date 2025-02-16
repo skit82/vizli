@@ -2,14 +2,40 @@
   &__info {
     display: flex;
     align-items: flex-end;
+
+    @include vp-769 {
+      align-items: stretch;
+    }
+
+    @include vp-599 {
+      flex-direction: column;
+      row-gap: 24px;
+    }
   }
 
   &__billet {
     margin-left: auto;
+    flex-shrink: 0;
+
+    @include vp-769 {
+      align-self: flex-end;
+    }
+
+    @include vp-599 {
+      align-self: center;
+      margin: 0;
+    }
+  }
+
+  &__caption {
+    @include vp-769 {
+      max-width: 384px;
+    }
   }
 
 
   &__name {
+
     p {
       font-size: 52px;
       font-family: $ff-roboto-1;
@@ -23,6 +49,16 @@
         font-size: 40px;
         line-height: 108%;
       }
+
+      @include vp-769 {
+        font-size: 32px;
+        line-height: 131%;
+      }
+
+      @include vp-599 {
+        font-size: 28px;
+        line-height: 136%;
+      }
     }
   }
 
@@ -31,13 +67,19 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 16px;
+    gap: 8px;
 
     padding: 18px 34px;
     width: 268px;
     height: 62px;
 
     background: linear-gradient(225deg, #336eed 0%, #2c1c79 100%);
+
+    @include vp-769 {
+      padding: 18px 18px;
+      width: 240px;
+      height: 56px;
+    }
 
     p {
       font-family: $ff-roboto-1;

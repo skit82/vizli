@@ -1,0 +1,118 @@
+.laboratory-test {
+  &__info {
+    margin-bottom: 120px;
+  }
+
+  &__name {
+    p {
+      font-size: 52px;
+      font-family: $ff-roboto-1;
+      font-weight: 300;
+      line-height: 115%;
+      margin: 0;
+
+      color: $color-dark-blue;
+
+      @include vp-1439 {
+        font-size: 40px;
+        line-height: 108%;
+      }
+    }
+  }
+
+  &__description {
+    margin-left: 96px;
+    max-width: 960px;
+
+    p {
+      font-size: 22px;
+      font-weight: 300;
+      font-family: $ff-roboto-1;
+      line-height: 145%;
+
+      color: $color-dark-blue;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 120px;
+    margin: 0 -96px;
+    margin-bottom: 160px;
+  }
+
+  &__content {
+    max-width: 384px;
+  }
+
+  &__caption {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    max-width: 1392px;
+    gap: 96px;
+
+    &-left {
+      margin-right: auto;
+    }
+
+    &-right {
+      margin-left: auto;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__term {
+    position: absolute;
+    bottom: 25%;
+
+    p {
+      font-family: $ff-roboto;
+      font-weight: 800;
+      font-size: 36px;
+
+      line-height: 128%;
+      color: #163557;
+      margin: 0
+    }
+  }
+
+  &__number {
+    margin-left: auto;
+
+    p {
+      font-family: "Roboto", sans-serif;
+      font-weight: 800;
+      font-size: 300px;
+
+      line-height: 89%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      background: linear-gradient(315deg, #0035e4 0%, #9900e0 20.63%, #00a7ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.2;
+      margin: 0;
+    }
+  }
+
+  &__text {
+    p {
+      font-family: $ff-roboto-1;
+      font-weight: 300;
+      font-size: 22px;
+
+      line-height: 145%;
+      color: #163557;
+      margin: 0;
+    }
+  }
+}

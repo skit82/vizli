@@ -21,6 +21,19 @@
     margin-top: -22px;
     margin-right: 20px;
 
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 430px;
+      left: 630px;
+      background-image: url("../img/content/spot-product-2.jpg");
+      background-repeat: no-repeat;
+      z-index: -1;
+
+    }
+
     @include vp-1439 {
       margin-top: -13px;
       margin-right: 38px;
@@ -81,19 +94,6 @@
 
   &__info {
     margin-bottom: 48px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 100%;
-      left: 500px;
-      top: 350px;
-      background-image: url("../img/content/spot-product-2.jpg");
-      background-repeat: no-repeat;
-      z-index: -1;
-
-    }
 
     @include vp-1439 {
       margin-bottom: 44px;
