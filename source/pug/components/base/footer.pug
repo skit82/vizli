@@ -1,3 +1,61 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
+      .footer__wrapper
+        .footer__contact
+          .footer__contact-title
+            h2.title.title--1.title--white.footer__contact-footer Контакты
+          .footer__contact-description
+            .footer__contact-adress
+              .footer__contact-name
+                p Адрес производства:
+              .footer__contact-caption
+                p OOO «ВИЗА», г. Тольятти, Самарская область, ул. Окраинная, 9А
+            .footer__contact-mail
+              .footer__contact-name
+                p Наша электронная почта:
+              .footer__contact-email
+                a(href="mail:powder.coatings@vizagroup.ru") powder.coatings@vizagroup.ru
+            .footer__contact-tel
+              .footer__contact-name
+                p Наш телефон:
+              .footer__contact-phone
+                a(href="tel:+78482697651") +7 8482 69 76 51
+                a(href="tel:+78482697655") +7 8482 69 76 55
+        .footer__feedback.feedback
+          .feedback__form(data-validate)
+            form(action="#", method="post", data-form="feedback-form")
+              .feedback__content
+                .feedback__caption
+                  p Заявка
+                .feedback__text
+                  p Заполните форму и оставьте заявку
+                .feedback-form__box
+                  .feedback-form__item
+                    +custom-input({inputPlaceholder: "ФИО*", inputName: "user-name", inputMinLength: "2"})(required, autocomplete="off")
+                  .feedback-form__item
+                    +custom-input({inputPlaceholder: "Почта*", inputType: "email", inputName: "user-email"})(required, autocomplete="off")
+                  .feedback-form__item
+                    +custom-input({inputPlaceholder: "Телефон*", inputType: "tel", inputName: "user-tel"})(required, autocomplete="off")
+                  .feedback-form__item
+                    +custom-input({inputPlaceholder: "ИНН*", inputName: "user-name", inputMinLength: "2"})(required, autocomplete="off")
+                  .feedback-form__item
+                    +custom-textarea({inputPlaceholder: "Сообщение", inputName: "user-question", inputMaxLength: "600"})
+              .feedback__content
+                .feedback-form__submit
+                  +btn({text: "Отправить заявку", type: "submit"}).feedback-form__btn
+                .feedback-form__text
+                  p Нажимая кнопку, вы даёте согласие на обработку ваших персональных данных
+      .footer__copyright
+        .footer__copyright-top
+          .footer__copyright-logo
+            img(src="./img/svg/logo.svg", widht="403", height="45", alt="Логотип компании")
+          .footer__copyright-name
+            p Порошковая краска российского производства
+        .footer__copyright-bottom
+          .footer__copyright-text
+            p © 2025, ООО «ВИЗА». Все права защищены
+          .footer__copyright-text
+            a(href="#") Политика конфиденциальности
+          .footer__copyright-text
+            a(href="#") Сделано в Интерпретации

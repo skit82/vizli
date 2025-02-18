@@ -1,0 +1,111 @@
+.stages {
+  &__name {
+    p {
+      font-size: 52px;
+      font-family: $ff-roboto-1;
+      font-weight: 300;
+      line-height: 115%;
+      margin: 0;
+
+      color: $color-dark-blue;
+
+      @include vp-1439 {
+        font-size: 40px;
+        line-height: 96%;
+      }
+
+      @include vp-769 {
+        font-size: 32px;
+        line-height: 125%;
+      }
+
+      @include vp-599 {
+        font-size: 28px;
+        line-height: 140%;
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: 48px;
+
+    @include vp-1439 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    margin-left: 96px;
+
+    @include vp-1439 {
+      margin-left: 45px;
+    }
+
+    @include vp-599 {
+      margin-left: 22px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 21px;
+
+    @include vp-1439 {
+      margin-bottom: 16px;
+    }
+
+    @include vp-599 {
+      margin-bottom: 17px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 16px;
+      width: 15px;
+      height: 2px;
+      background-color: $color-blue-blue;
+
+      @include vp-1439 {
+        top: 15px;
+        width: 14px;
+        height: 2px;
+      }
+
+      @include vp-599 {
+        top: 12px;
+      }
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 300;
+      font-family: $ff-roboto-1;
+      line-height: 145%;
+
+      margin: 0;
+
+      color: $color-dark-blue;
+
+      @include vp-1439 {
+        font-size: 20px;
+        line-height: 150%;
+      }
+
+      @include vp-769 {
+        font-size: 18px;
+        line-height: 157%;
+      }
+
+      @include vp-599 {
+        font-size: 16px;
+      }
+    }
+  }
+}

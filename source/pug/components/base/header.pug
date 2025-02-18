@@ -22,15 +22,19 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods, data-mob-menu="burger-mod", data-fix-block)
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo-mobile
-          img(src="./img/svg/logo.svg", widht="403", height="45", alt="Логотип компании")
+        .header__mobile
+          span.header__logo-mobile
+            img(src="./img/svg/logo.svg", widht="403", height="45", alt="Логотип компании")
+          .header__mobile-contact
+            p #[a(href="tel:+78482697651", class="contact__phone") +7 8482 69 76 51]
+            p #[a(href="tel:+78482697655", class="contact__phone") +7 8482 69 76 55]
+          button.header__menu-toggle(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-mob-menu="menu-toggle")
+            span
+            span
+            span
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
           img(src="./img/svg/logo.svg", widht="403", height="45", alt="Логотип компании")
-      button.header__menu-toggle(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-mob-menu="menu-toggle")
-        span
-        span
-        span
       .header__wrapper(data-mob-menu="burger-mod")
         if(currentUrl === "index.html")
           //- lighthouse снимает 10 баллов SEO за <a> без href
@@ -56,6 +60,7 @@ mixin header(headerMods, currentUrl)
         .header__contact
           p #[a(href="tel:+78482697651", class="contact__phone") +7 8482 69 76 51]
           p #[a(href="tel:+78482697655", class="contact__phone") +7 8482 69 76 55]
+          button(type="button").btn.btn--mob.header__contact-btn Отправить заявку
       .container
         .info
           .info__wrapper
@@ -74,19 +79,19 @@ mixin header(headerMods, currentUrl)
               .certificate__content
                 .certificate__description
                   .certificate__description-img.certificate__description-img--iso
-                    +icon("icon-iso", 60, 60)
+                    img(src="./img/sprite/icon-iso.svg", widht="60", height="60", alt="Логотип")
                   .certificate__description-box
                     .certificate__description-text
                       a(href="#").certificate__description-link Сертификат ISO 9001:2024*
                     .certificate__description-icon
-                      +icon("icon-upload", 26, 29)
+                      img(src="./img/sprite/icon-upload.svg", widht="26", height="29", alt="Логоти")
                 .certificate__description
                   .certificate__description-img.certificate__description-img--iatf
-                    +icon("icon-iatf", 88, 60)
+                    img(src="./img/sprite/icon-iatf.svg", widht="88", height="60", alt="Логотип компании")
                   .certificate__description-box
                     .certificate__description-text
                       a(href="#").certificate__description-link Сертификат IATF 16949*
                     .certificate__description-icon
-                      +icon("icon-upload", 26, 29)
+                      img(src="./img/sprite/icon-upload.svg", widht="26", height="29", alt="Логотип")
               .certificate__copyright
                 p * Сертификаты будут доступны с марта 2025 года

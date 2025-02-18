@@ -1,17 +1,49 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
 
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
   cursor: pointer;
+  border: none;
 
-  transition: opacity $trans-default;
+  font-weight: 500;
+  font-family: $ff-roboto-1;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+
+  border-radius: 100px;
+  padding: 23px 84px;
+  width: 384px;
+  height: 70px;
+  background: linear-gradient(99deg, #336eed 0%, #12326f 64.77%, #6249d6 100%);
 
   &--red {
     background-color: $color-torch-red;
+  }
+
+  &--mob {
+    @include vp-599 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 10px;
+
+      border-radius: 100px;
+      padding: 23px 23px;
+      width: 252px;
+      height: 68px;
+
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #fff;
+    }
   }
 
   &:disabled {
@@ -21,6 +53,6 @@
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    // opacity: 0.8;
   }
 }

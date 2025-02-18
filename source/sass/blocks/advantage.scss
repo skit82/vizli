@@ -7,6 +7,12 @@
     @include vp-1439 {
       margin-bottom: 88px;
     }
+
+    @include vp-599 {
+      flex-direction: column;
+      row-gap: 24px;
+      margin-bottom: 65px;
+    }
   }
 
   &__description {
@@ -24,10 +30,10 @@
     &::before {
       position: absolute;
       content: "";
-      width: 100%;
+      width: 1423px;
       height: 100%;
-      top: 430px;
-      left: 630px;
+      top: 500px;
+      right: 0;
       background-image: url("../img/content/spot-product-2.jpg");
       background-repeat: no-repeat;
       z-index: -1;
@@ -36,12 +42,36 @@
 
     @include vp-1439 {
       margin-top: -13px;
-      margin-right: 38px;
+      margin-right: 0;
+      justify-content: end;
+    }
+
+    @include vp-1023 {
+      justify-content: center;
+    }
+
+    @include vp-599 {
+      margin-right: 13px;
+      margin-top: 0;
+      flex: 100%;
+      justify-content: flex-end;
     }
 
     img {
       @include vp-1439 {
         width: 384px;
+      }
+
+      @include vp-1023 {
+        width: 320px;
+      }
+
+      @include vp-769 {
+        width: 251px;
+      }
+
+      @include vp-599 {
+        width: 251px;
       }
     }
   }
@@ -59,12 +89,43 @@
     transform: translateX(60px);
     background: linear-gradient(99deg, #336eed 0%, #12326f 64.77%, #6249d6 100%);
 
+    @include vp-1439 {
+      width: 145px;
+      height: 145px;
+    }
+
+    @include vp-769 {
+      width: 90px;
+      height: 90px;
+      transform: translateX(30px);
+    }
+
+    @include vp-599 {
+      width: 90px;
+      height: 90px;
+      transform: translateX(30px);
+    }
+
     p {
       font-weight: 900;
       font-size: 60px;
       font-family: $ff-roboto;
       line-height: 117%;
       color: #ffffff;
+
+      @include vp-1439 {
+        font-size: 54px;
+      }
+
+      @include vp-769 {
+        font-size: 36px;
+        line-height: 128px;
+      }
+
+      @include vp-599 {
+        font-size: 36px;
+        line-height: 128px;
+      }
     }
 
     span {
@@ -73,6 +134,20 @@
       line-height: 128%;
       font-family: $ff-roboto;
       color: #ffffff;
+
+      @include vp-1439 {
+        font-size: 30px;
+      }
+
+      @include vp-769 {
+        font-size: 24px;
+        line-height: 142%;
+      }
+
+      @include vp-599 {
+        font-size: 24px;
+        line-height: 142%;
+      }
     }
   }
 
@@ -89,6 +164,15 @@
       @include vp-1439 {
         font-size: 40px;
       }
+
+      @include vp-769 {
+        font-size: 32px;
+      }
+
+      @include vp-599 {
+        font-size: 28px;
+        line-height: 140%;
+      }
     }
   }
 
@@ -97,6 +181,10 @@
 
     @include vp-1439 {
       margin-bottom: 44px;
+    }
+
+    @include vp-599 {
+      margin-bottom: 38px;
     }
   }
 
@@ -110,6 +198,10 @@
     @include vp-1439 {
       margin-left: 42px;
     }
+
+    @include vp-599 {
+      margin-left: 24px;
+    }
   }
 
   &__item {
@@ -119,6 +211,11 @@
 
     @include vp-1439 {
       margin-bottom: 17px;
+    }
+
+    @include vp-599 {
+      padding-left: 24px;
+      margin-bottom: 16px;
     }
 
     &::before {
@@ -132,6 +229,11 @@
 
       @include vp-1439 {
         top: 13px;
+      }
+
+      @include vp-599 {
+        top: 12px;
+        height: 2px;
       }
     }
 
@@ -147,6 +249,11 @@
 
       @include vp-1439 {
         font-size: 20px;
+      }
+
+      @include vp-599 {
+        font-size: 16px;
+        line-height: 162%;
       }
     }
   }

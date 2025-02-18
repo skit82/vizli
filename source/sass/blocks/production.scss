@@ -1,15 +1,39 @@
 .production {
   &__wrapper {
     margin-bottom: 120px;
+
+    @include vp-769 {
+      margin-bottom: 96px;
+    }
+
+    @include vp-599 {
+      margin-bottom: 63px;
+    }
   }
 
   &__title {
     margin-bottom: 56px;
+
+    @include vp-1439 {
+      margin-bottom: 59px;
+    }
+
+    @include vp-769 {
+      margin-bottom: 52px;
+    }
+
+    @include vp-599 {
+      margin-bottom: 40px;
+    }
   }
 
   &__name {
     max-width: 1248px;
     margin-bottom: 40px;
+
+    @include vp-1439 {
+      max-width: 960px;
+    }
 
     p {
       font-family: $ff-roboto-1;
@@ -19,12 +43,35 @@
       margin: 0;
 
       color: $color-dark-blue;
+
+      @include vp-1439 {
+        font-size: 28px;
+        line-height: 143%;
+      }
+
+      @include vp-769 {
+        font-size: 24px;
+        line-height: 150%;
+      }
+
+      @include vp-599 {
+        font-size: 20px;
+        line-height: 160%;
+      }
     }
   }
 
   &__description {
     margin-left: 96px;
     max-width: 1248px;
+
+    @include vp-1439 {
+      max-width: 960px;
+    }
+
+    @include vp-599 {
+      margin-left: 0;
+    }
 
     p {
       font-size: 22px;
@@ -33,6 +80,22 @@
       line-height: 145%;
 
       color: $color-dark-blue;
+
+      @include vp-1439 {
+        font-size: 20px;
+        line-height: 150%;
+      }
+
+      @include vp-769 {
+        font-size: 18px;
+        line-height: 157%;
+      }
+
+      @include vp-599 {
+        font-size: 16px;
+        line-height: 163%;
+        margin: 0;
+      }
     }
   }
 }

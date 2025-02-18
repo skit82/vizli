@@ -1,9 +1,27 @@
 .laboratory-test {
   &__info {
     margin-bottom: 120px;
+
+    @include vp-769 {
+      margin-bottom: 97px;
+    }
+
+    @include vp-599 {
+      margin-bottom: 86px;
+    }
   }
 
   &__name {
+    margin-bottom: 40px;
+
+    @include vp-769 {
+      margin-bottom: 46px;
+    }
+
+    @include vp-599 {
+      margin-bottom: 40px;
+    }
+
     p {
       font-size: 52px;
       font-family: $ff-roboto-1;
@@ -15,7 +33,17 @@
 
       @include vp-1439 {
         font-size: 40px;
-        line-height: 108%;
+        line-height: 96%;
+      }
+
+      @include vp-769 {
+        font-size: 32px;
+        line-height: 112%;
+      }
+
+      @include vp-599 {
+        font-size: 28px;
+        line-height: 135%;
       }
     }
   }
@@ -24,6 +52,10 @@
     margin-left: 96px;
     max-width: 960px;
 
+    @include vp-599 {
+      margin-left: 0;
+    }
+
     p {
       font-size: 22px;
       font-weight: 300;
@@ -31,6 +63,21 @@
       line-height: 145%;
 
       color: $color-dark-blue;
+
+      @include vp-1439 {
+        font-size: 20px;
+        line-height: 150%;
+      }
+
+      @include vp-769 {
+        font-size: 18px;
+        line-height: 152%;
+      }
+
+      @include vp-599 {
+        font-size: 16px;
+        line-height: 162%;
+      }
     }
   }
 
@@ -38,18 +85,42 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 120px;
-    margin: 0 -96px;
+    margin: 0;
     margin-bottom: 160px;
+
+    @include vp-769 {
+      gap: 97px;
+    }
+
+    @include vp-599 {
+      margin-bottom: 80px;
+    }
   }
 
   &__content {
     max-width: 384px;
+
+    @include vp-899 {
+      max-width: 192px;
+    }
   }
 
   &__caption {
     display: flex;
     justify-content: flex-start;
     position: relative;
+
+    @include vp-1439 {
+      justify-content: flex-end;
+    }
+
+    @include vp-899 {
+      justify-content: flex-start;
+    }
+
+    @include vp-599 {
+      margin-top: -7px;
+    }
   }
 
   &__card {
@@ -59,19 +130,74 @@
     max-width: 1392px;
     gap: 96px;
 
+    @include vp-1439 {
+      gap: 48px;
+    }
+
+    @include vp-899 {
+      max-width: 720px;
+    }
+
+    @include vp-599 {
+      flex-direction: column;
+      gap: 16px;
+    }
+
     &-left {
       margin-right: auto;
+      margin-left: -96px;
+
+      @include vp-1299 {
+        margin-left: -48px;
+      }
+
+      @include vp-599 {
+        margin-left: 0;
+      }
     }
 
     &-right {
       margin-left: auto;
+      margin-right: -96px;
       flex-direction: row-reverse;
+
+      @include vp-1299 {
+        margin-right: -48px;
+      }
+
+      @include vp-599 {
+        margin-right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__picture {
+    @include vp-599 {
+      margin: 0 -12px;
+      order: 2;
     }
   }
 
   &__term {
     position: absolute;
     bottom: 25%;
+
+    @include vp-1439 {
+      bottom: 24%;
+      left: 0;
+    }
+
+    @include vp-899 {
+      bottom: 12%;
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    @include vp-599 {
+      margin-bottom: 24px;
+    }
 
     p {
       font-family: $ff-roboto;
@@ -80,12 +206,64 @@
 
       line-height: 128%;
       color: #163557;
-      margin: 0
+      margin: 0;
+
+      @include vp-1439 {
+        font-size: 30px;
+      }
+
+      @include vp-899 {
+        font-size: 24px;
+        line-height: 142%;
+      }
+
+      @include vp-599 {
+        font-size: 22px;
+        line-height: 145%;
+      }
     }
   }
 
   &__number {
     margin-left: auto;
+
+    @include vp-1439 {
+      margin: 0;
+      max-width: 160px;
+    }
+
+    @include vp-899 {
+      position: absolute;
+      right: -8px;
+      bottom: 0px;
+    }
+
+    @include vp-599 {
+      top: -56px;
+    }
+
+    &--3 {
+      @include vp-899 {
+        bottom: -53px;
+      }
+
+      @include vp-599 {
+        top: -56px;
+      }
+    }
+
+    &--4 {
+      @include vp-899 {
+        bottom: -26px;
+        right: -25px;
+      }
+
+      @include vp-599 {
+        right: -2px;
+        top: -56px;
+      }
+    }
+
 
     p {
       font-family: "Roboto", sans-serif;
@@ -101,6 +279,14 @@
       -webkit-text-fill-color: transparent;
       opacity: 0.2;
       margin: 0;
+
+      @include vp-899 {
+        font-size: 200px;
+      }
+
+      @include vp-599 {
+        font-size: 180px;
+      }
     }
   }
 
@@ -113,6 +299,21 @@
       line-height: 145%;
       color: #163557;
       margin: 0;
+
+      @include vp-1439 {
+        font-size: 20px;
+        line-height: 150%;
+      }
+
+      @include vp-899 {
+        font-size: 18px;
+        line-height: 156%;
+      }
+
+      @include vp-599 {
+        font-size: 16px;
+        line-height: 162%;
+      }
     }
   }
 }

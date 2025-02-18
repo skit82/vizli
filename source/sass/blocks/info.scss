@@ -13,7 +13,7 @@
     }
 
     @include vp-599 {
-      margin-bottom: 24px;
+      margin-bottom: 25px;
     }
 
     p {
@@ -57,13 +57,13 @@
 
     @include vp-769 {
       row-gap: 218px;
-      padding-top: 211px;
+      padding-top: 193px;
       padding-left: 0;
       padding-bottom: 40px;
     }
 
     @include vp-599 {
-      padding-top: 130px;
+      padding-top: 98px;
       row-gap: 128px;
       padding-bottom: 17px;
     }
@@ -100,10 +100,11 @@
 
       @include vp-769 {
         top: 17px;
+        height: 2px;
       }
 
       @include vp-599 {
-        top: 13px;
+        top: 14px;
       }
     }
 

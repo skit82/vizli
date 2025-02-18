@@ -91,7 +91,7 @@
     }
 
     &--iso {
-      svg {
+      img {
         @include vp-599 {
           width: 50px;
           height: 50px;
@@ -100,7 +100,7 @@
     }
 
     &--iatf {
-      svg {
+      img {
         @include vp-599 {
           width: 75px;
           height: 50px;
@@ -111,5 +111,7 @@
 
   &__description-icon {
     margin-left: 5px;
+    flex-shrink: 0;
+    padding-bottom: 4px;
   }
 }

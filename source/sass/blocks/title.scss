@@ -72,4 +72,22 @@
       line-height: 133%;
     }
   }
+
+  &--white {
+    color: #ffffff;
+  }
+
+  &.footer__contact-footer {
+    @include vp-1699 {
+      font-size: 92px;
+    }
+
+    @include vp-1149 {
+      font-size: 72px;
+    }
+
+    @include vp-599 {
+      font-size: 40px;
+    }
+  }
 }
