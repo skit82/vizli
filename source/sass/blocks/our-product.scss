@@ -26,24 +26,37 @@
       position: absolute;
       content: "";
       width: 1660px;
-      height: 100%;
+      height: 1220px;
       left: 0;
-      top: -600px;
+      top: -380px;
       background-image: url("../img/content/spot-product-1.jpg");
       background-repeat: no-repeat;
-      z-index: -1;
+      z-index: -5;
+      mix-blend-mode:multiply;
+
+      @include vp-1921 {
+        width: 1124px;
+        top: -380px;
+        background-image: url("../img/content/spot-product-1-1920.jpg");
+      }
 
       @include vp-1439 {
+        width: 832px;
+        top: -392px;
         background-image: url("../img/content/spot-product-1lx.jpg");
       }
 
       @include vp-769 {
-        background-image: url("../img/content/spot--product-1px.jpg");
+        width: 768px;
+        top: -576px;
+        background-image: url("../img/content/spot-product-1-768.jpg");
       }
 
       @include vp-599 {
-        background-image: url("../img/content/spot-product-1mx.jpg");
+        width: 360px;
+        height: 510px;
         top: -200px;
+        background-image: url("../img/content/spot-product-1mx.jpg");
       }
     }
 

@@ -1,4 +1,48 @@
 .production {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 1660px;
+    height: 1421px;
+    left: 0;
+    bottom: 312px;
+    background-image: url("../img/content/spot-product-3-2560.jpg");
+    background-repeat: no-repeat;
+    mix-blend-mode:multiply;
+    z-index: -1;
+
+    @include vp-1921 {
+      width: 957px;
+      bottom: 312px;
+      background-image: url("../img/content/spot-product-3.jpg");
+    }
+
+    @include vp-1439 {
+      width: 774px;
+      bottom: 268px;
+      background-image: url("../img/content/spot-product-3-1440.jpg");
+    }
+
+    @include vp-769 {
+      max-width: 768px;
+      width: 100%;
+      bottom: 330px;
+      background-image: url("../img/content/spot-product-3-768.jpg");
+    }
+
+    @include vp-599 {
+      max-width: 360px;
+      width: 100%;
+      height: 945px;
+      bottom: 502px;
+      background-image: url("../img/content/spot-product-3-360.jpg");
+    }
+
+  }
+
+
   &__wrapper {
     margin-bottom: 120px;
 

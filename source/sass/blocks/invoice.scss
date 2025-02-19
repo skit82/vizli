@@ -91,4 +91,27 @@
       margin: 0;
     }
   }
+
+  &__submit-btn.btn {
+    margin: 0 auto;
+    max-width: 393px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 23px 23px;
+
+    box-shadow: transparent;
+    transition: box-shadow $trans-default;
+
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        box-shadow: 0 4px 130px 0 rgba(60, 62, 165, 0.4), 0 4px 100px 0 rgba(60, 62, 165, 0.25), 0 4px 50px 0 rgba(60, 62, 165, 0.25), 0 4px 30px 0 rgba(60, 62, 165, 0.25);
+      }
+    }
+  }
 }

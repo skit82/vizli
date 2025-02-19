@@ -10,3 +10,5 @@ mixin invoice()
         .invoice__billet
           img(src="./img/sprite/icon-tick.svg", widht="23", height="24", alt="Галка")
           p всегда в наличии
+      .invoice__submit
+        +btn({text: "Заказать черную краску", type: "buttom"}).invoice__submit-btn(data-open-modal="next")

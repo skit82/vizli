@@ -242,7 +242,7 @@
     padding-bottom: 22px;
 
     @include vp-1699 {
-      padding-bottom: 18px;
+      padding-bottom: 16px;
     }
 
     @include vp-1149 {
@@ -260,6 +260,11 @@
     max-width: 288px;
     margin-bottom: 68px;
 
+    @include vp-1699 {
+      gap: 23px;
+      margin-bottom: 65px;
+    }
+
     @include vp-1149 {
       max-width: 100%;
       justify-content: center;
@@ -276,6 +281,10 @@
 
   &__copyright-logo {
     img {
+      @include vp-1699 {
+        width: 231px;
+      }
+
       @include vp-1149 {
         width: 300px;
       }
@@ -343,15 +352,41 @@
     }
 
     a {
+      position: relative;
       font-family: $ff-roboto-1;
       font-weight: 300;
       font-size: 18px;
 
       line-height: 144%;
-      color: #fff;
+      color: $color-default-white;
       margin: 0;
-      text-decoration: underline;
-      text-decoration-skip-ink: none;
+      // text-decoration: underline;
+      // text-decoration-skip-ink: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 2px;
+        transform-origin: center;
+        transform: scaleX(100%);
+        background-color: $color-default-white;
+        transition: transform $trans-default;
+      }
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+
+
+        &::before {
+          transform: scaleX(0);
+          background-color: $color-default-white;
+        }
+      }
+    }
 
 
       @include vp-1149 {
@@ -400,6 +435,10 @@
 }
 
 .feedback-form__item {
+  @include vp-1699 {
+    margin-bottom: 18px;
+  }
+
   @include vp-599 {
     margin-bottom: 22px;
   }
@@ -409,7 +448,7 @@
   margin-bottom: 15px;
 
   @include vp-1699 {
-    margin-bottom: 12px;
+    margin-bottom: 28px;
   }
 
   @include vp-599 {
@@ -438,7 +477,7 @@
   margin-top: 56px;
 
   @include vp-1699 {
-    margin-top: 50px;
+    margin-top: 58px;
   }
 
   @include vp-599 {
@@ -449,8 +488,19 @@
 .feedback-form__btn.btn {
   width: 100%;
   padding: 23px 23px;
-  box-shadow: 0 4px 130px 0 rgba(60, 62, 165, 0.4), 0 4px 100px 0 rgba(60, 62, 165, 0.25), 0 4px 50px 0 rgba(60, 62, 165, 0.25), 0 4px 30px 0 rgba(60, 62, 165, 0.25);
+  box-shadow: transparent;
+  transition: box-shadow $trans-default;
+
   background: linear-gradient(99deg, #336eed 0%, #12326f 64.77%, #6249d6 100%);
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+       box-shadow: 0 4px 130px 0 rgba(60, 62, 165, 0.4), 0 4px 100px 0 rgba(60, 62, 165, 0.25), 0 4px 50px 0 rgba(60, 62, 165, 0.25), 0 4px 30px 0 rgba(60, 62, 165, 0.25);
+    }
+  }
+
+
 
   @include vp-599 {
     width: 252px;

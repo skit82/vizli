@@ -1,0 +1,25 @@
+mixin callback-form()
+
+  .callback-form(data-validate)
+    form(action="#", method="post", data-form="callback-form")
+      .callback-form__content
+        .callback-form__caption
+          p Заявка
+        .callback-form__text
+          p Заполните форму и оставьте заявку на черную краску
+        .callback-form__box
+          .callback-form__item
+            +custom-input({inputPlaceholder: "ФИО*", inputName: "user-name", inputMinLength: "2"})(required, autocomplete="off")
+          .callback-form__item
+            +custom-input({inputPlaceholder: "Почта*", inputType: "email", inputName: "user-email"})(required, autocomplete="off")
+          .callback-form__item
+            +custom-input({inputPlaceholder: "Телефон*", inputType: "tel", inputName: "user-tel"})(required, autocomplete="off")
+          .callback-form__item
+            +custom-input({inputPlaceholder: "ИНН*", inputName: "user-name", inputMinLength: "2"})(required, autocomplete="off")
+          .callback-form__item
+            +custom-textarea({inputPlaceholder: "Сообщение", inputName: "user-question", inputMaxLength: "600"})
+      .callback-form__content
+        .callback-form__submit
+          +btn({text: "Отправить заявку", type: "submit"}).callback-form__btn
+        .callback-form__name
+          p Нажимая кнопку, вы даёте согласие на обработку ваших персональных данных

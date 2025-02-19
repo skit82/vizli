@@ -1,18 +1,23 @@
 .header {
   position: relative;
-  background-image: url("../img/content/banner-1920.png");
+  background-image: url("../img/content/banner-1920.jpg");
   background-size: cover;
   background-position: center center;
   min-height: 900px;
 
   @include vp-1439 {
-    background-image: url("../img/content/banner-1440.png");
+    background-image: url("../img/content/banner-1440.jpg");
     min-height: 800px;
   }
 
   @include vp-769 {
-    background-image: url("../img/content/banner-768.png");
+    background-image: url("../img/content/banner-768.jpg");
     min-height: 1024px;
+  }
+
+  @include vp-599 {
+    background-image: url("../img/content/banner-360.jpg");
+    min-height: 660px;
   }
 
   .container {

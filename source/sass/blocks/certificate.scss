@@ -11,6 +11,7 @@
 
   &__description-link {
     display: block;
+    position: relative;
     font-size: 16px;
     font-weight: 400;
     line-height: 137%;
@@ -19,21 +20,19 @@
     color: $color-default-white;
     text-decoration: underline;
     text-decoration-skip-ink: none;
+    transition: text-decoration $trans-1200;
     margin: 0;
 
-    @include vp-599 {
-      font-size: 14px;
-    }
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
       &:focus {
-
-
-        &__description-link {
-          text-decoration: none;
-        }
+        text-decoration: none;
       }
+    }
+
+    @include vp-599 {
+      font-size: 14px;
     }
   }
 
